@@ -1,0 +1,62 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tabs {
+  display: flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.tab,
+.activeTab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.tab {
+  color: var(--color-text-muted);
+}
+
+.activeTab {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.field input {
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.field input:focus {
+  border-color: var(--color-primary);
+}
+
+.error {
+  color: var(--color-danger);
+  font-size: 0.875rem;
+  padding: 8px 12px;
+  background: #fef2f2;
+  border-radius: var(--radius);
+}

@@ -1,0 +1,94 @@
+.page {
+  padding: 8px 0;
+  /* Fixed min-height so the page doesn't shrink when cart empties */
+  min-height: 60vh;
+}
+
+.heading {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.layout {
+  display: grid;
+  /* Use minmax so the left column never forces the grid wider than its container */
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .layout { grid-template-columns: minmax(0, 1fr); }
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0; /* allow flex child to shrink below its content size */
+}
+
+.summary {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: sticky;
+  top: 80px;
+}
+
+.summaryTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.free { color: var(--color-success); font-weight: 600; }
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.totalRow {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* Empty / Success states — fixed height so page doesn't jump */
+.empty,
+.success {
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.emptyIcon,
+.successIcon {
+  font-size: 3rem;
+}
+
+.empty h2,
+.success h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.empty p,
+.success p {
+  color: var(--color-text-muted);
+}

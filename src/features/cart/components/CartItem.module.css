@@ -1,0 +1,103 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  /* Ensure the card never grows wider than its grid cell */
+  min-width: 0;
+  overflow: hidden;
+}
+
+.image {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  flex-shrink: 0;
+}
+
+.info {
+  flex: 1;
+  min-width: 0; /* allows text-overflow: ellipsis to work */
+}
+
+.title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.qtyBtn {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  width: 26px;
+  height: 26px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+
+.qtyBtn:hover:not(:disabled) {
+  background: var(--color-border);
+}
+
+.qtyBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.qty {
+  font-weight: 700;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.subtotal {
+  font-weight: 700;
+  color: var(--color-primary);
+  width: 56px;
+  text-align: right;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+/* On very narrow screens stack controls below info */
+@media (max-width: 480px) {
+  .item {
+    flex-wrap: wrap;
+  }
+
+  .info {
+    /* Take full width after image on small screens */
+    width: calc(100% - 84px);
+  }
+
+  .controls,
+  .subtotal {
+    margin-left: auto;
+  }
+}

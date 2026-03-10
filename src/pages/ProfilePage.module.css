@@ -1,0 +1,99 @@
+.page {
+  padding: 8px 0;
+}
+
+.authWrap {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 48px 0;
+  text-align: center;
+}
+
+.heading {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.sub {
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+}
+
+.formWrap {
+  text-align: left;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.name {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.email {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.header > :last-child {
+  margin-left: auto;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid var(--color-border);
+  margin-bottom: 24px;
+}
+
+.tab,
+.activeTab {
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+}
+
+.activeTab {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.orders {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.empty {
+  text-align: center;
+  padding: 48px;
+  color: var(--color-text-muted);
+}
