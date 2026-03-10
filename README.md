@@ -12,7 +12,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 [![Author](https://img.shields.io/badge/author-mihuilsu-blueviolet?style=flat-square&logo=github)](https://github.com/mihuilsu)
-[![Vercel](https://img.shields.io/badge/demo-Vercel-000000?style=flat-square&logo=vercel)](https://your-live-demo-url.vercel.app)
+[![Vercel](https://img.shields.io/badge/demo-Vercel-000000?style=flat-square&logo=vercel)](https://homework-52-one.vercel.app)
 
 </div>
 
